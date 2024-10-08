@@ -82,7 +82,7 @@ I later url encoded the value using cyberchef.
 
 
 I then edited the values and replaced it with bob userid in the uid parameter and base64 encoded uid in  userid cookie value. 
-I had intercepted the  request and sent to repeater for more testing. I sent the request  after  updating  it with our bob  uid and we were able to access bob  dashboard  after exploiting the IDOR vulnerability.  
+I had intercepted the  request and sent it to the repeater for more testing. I sent the request  after  updating  it with our bob  uid and we were able to access bob  dashboard  successfully exploiting the IDOR vulnerability.  
 
 ![secon flag](https://github.com/Tenkph/EK4-Cybersecurity-Barcamp-CTF/blob/main/Quest/screenshots/secondFlag.png)
 
@@ -117,7 +117,7 @@ And we got access  as the webmaster. On the dashboard we could  find the third f
 
 # Injection 
 
-There was an input to input a command, So intercepted the request and sent it to repeater and tested for command injection. 
+There was a user  input to input a command, So intercepted the request and sent it to repeater and tested for command injection. 
 
 ![ injection ](https://github.com/Tenkph/EK4-Cybersecurity-Barcamp-CTF/blob/main/Quest/screenshots/ls.png)
 
