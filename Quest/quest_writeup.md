@@ -6,12 +6,12 @@
 
 I launched the instance and  navigated to the target. 
 On visiting the target i  came across a login page. Since we did not have any credentials to access the app, I decided to do more recon.  
-I  decided to look for any hidden directories.  I started with directory busting using ffuf
+I  decided to look for any hidden directories or files .  I started with directory busting using ffuf
 
 ![ ffuf Scan](https://github.com/Tenkph/EK4-Cybersecurity-Barcamp-CTF/blob/main/Quest/screenshots/ffuf_scan.png)
 
 
-I had left a ffuf running in the background to identify and hidden directories or files, but it  never  got any thing interesting.  
+I had left  ffuf scan running in the background to identify any hidden directories or files, but it  never  got any thing interesting.  
 Output of the ffuf scan.  
 
 ![ ffuf Scan Output](https://github.com/Tenkph/EK4-Cybersecurity-Barcamp-CTF/blob/main/Quest/screenshots/ffufScan_output.png)
@@ -38,7 +38,7 @@ email=jameson%40quest-dev.com&password=1234
 
 email: jameson@quest-dev.com
 
-I used rockyou.txt wordlist to bruteforce the login page  using hydra and the command was as follows: 
+I used rockyou.txt wordlist to bruteforce the login page  together with  hydra and the command was as follows: 
 
 ![ ffuf Scan Output](https://github.com/Tenkph/EK4-Cybersecurity-Barcamp-CTF/blob/main/Quest/screenshots/hydra.png)
 
@@ -57,7 +57,7 @@ On login  I decided to intercept the login request. I noticed the server was  is
 
 cookies used: PHPSESSID=njhcahtpk1nus9fe1ju5l8v1br; AccessLevel=dXNlcg%3D%3D; userid=MTI%3D
 
-accesslevel is base64 encoded which we could decode and understand how the application was utilising the accesslevel  cookie. 
+accesslevel is base64 encoded which we could easily decode and understand how the application was utilising the accesslevel  cookie. 
 
 Also the userid was encoded in base64 when decoding it, it was jameson userid.
 
